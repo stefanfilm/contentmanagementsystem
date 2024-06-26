@@ -26,7 +26,7 @@ Navigate to the directory in the code editor and go to the command line. Type in
 
 
     ```md
-    ![Create_New_Blog_Post](./Develop/command_line.png)
+    ![Create_New_Blog_Post](./command_line.png)
     ```
 
 
