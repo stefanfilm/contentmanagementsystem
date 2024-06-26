@@ -28,7 +28,7 @@ class Database {
     }
 
     findAllRoles() {
-        return this.query("select * from employee")
+        return this.query("select * from role")
     }
 
     addRole(employee) {
@@ -37,7 +37,7 @@ class Database {
     }
  
     findAllDepartments () {
-        return this.query("select * from employee")
+        return this.query("select * from department")
     }
 
     addDepartment (employee) {
@@ -45,7 +45,5 @@ class Database {
         return this.query ("insert into department(name) values ($1)",[name])
     }
 }
-
-// update table name set value column = $1 etc
 
 module.exports = new Database()

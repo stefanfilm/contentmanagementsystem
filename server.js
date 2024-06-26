@@ -58,7 +58,7 @@ function addEmployee() {
 }
 function updateEmployeeRole() {
     const updateEmployeeQuestions = [{name:"id",message: "What is the employee_id to update?"}, {name: "role_id", message: "What is the new role?"}]
-    inquirer.prompt(newEmployeeQuestions).then((employee) => {
+    inquirer.prompt(updateEmployeeQuestions).then((employee) => {
         db.updateEmployeeRole(employee).then((after) => {
             console.log(after.rows)
         }).then(() => {
@@ -68,7 +68,11 @@ function updateEmployeeRole() {
 }
 
 function viewAllRoles() {
-main()
+    db.findAllRoles().then((after) => {
+        console.log(after.rows)
+    }).then(() => {
+        main()
+    })
 }
 
 function addRole() {
@@ -83,7 +87,11 @@ function addRole() {
 }
 
 function viewAllDepartments() {
-main()
+    db.findAllDepartments().then((after) => {
+        console.log(after.rows)
+    }).then(() => {
+        main()
+    })
 }
 
 function addDepartment() {
